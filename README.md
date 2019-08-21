@@ -11,4 +11,6 @@
   mock 模拟数据接口文件夹  
   pages 路由组件文件夹  
   router 路由器文件夹  
-  store vuex相关模块文件夹  
+  store vuex相关模块文件夹   
+ 
+ 
