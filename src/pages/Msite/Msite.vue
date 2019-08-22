@@ -1,17 +1,13 @@
 <template>
     <div class="msite">
-      <!--首页头部-->
-      <header class="msite_header">
-          <span class="header_search">
+      <HeaderTop title="昌平区北七家宏福科技园(337省道北)" >
+          <span class="header_search" slot="left">
             <i class="iconfont icon-sousuo"></i>
           </span>
-        <span class="header_title">
-            <span class="header_title_text ellipsis">昌平区北七家宏福科技园(337省道北)</span>
-          </span>
-        <span class="header_login">
+          <span class="header_login" slot="right">
             <span class="header_login_text">登录|注册</span>
           </span>
-      </header>
+      </HeaderTop>
       <!--首页导航-->
       <nav class="msite_nav">
         <div class="swiper-container">
@@ -71,13 +67,13 @@
                 <div class="food_container">
                   <img src="./images/nav/9.jpg">
                 </div>
-                <span>甜品饮品</span>
+                <span>甜品饮品2</span>
               </a>
               <a href="javascript:" class="link_to_food">
                 <div class="food_container">
                   <img src="./images/nav/10.jpg">
                 </div>
-                <span>商超便利</span>
+                <span>商超便利2</span>
               </a>
               <a href="javascript:" class="link_to_food">
                 <div class="food_container">
@@ -312,8 +308,22 @@
 </template>
 
 <script>
+  import HeaderTop from "../../components/HeaderTop/HeaderTop";
+  import Swiper from "swiper"
+  import "swiper/dist/css/swiper.css"
     export default {
-        name: "Msite"
+        name: "Msite",
+      components: {HeaderTop},
+      mounted(){
+          //创建Swiper实例对象，实现轮播
+        new Swiper ('.swiper-container', {
+          loop: true,//可以循环轮播
+          // 如果需要分页器
+          pagination: {
+            el:'.swiper-pagination'
+          },
+        })
+      }
     }
 </script>
 
@@ -322,45 +332,6 @@
   @import "../../common/stylus/mixins.styl"
   .msite  //首页
     width 100%
-    .msite_header
-      background-color #02a774
-      position fixed
-      z-index 100
-      left 0
-      top 0
-      width 100%
-      height 45px
-      .header_search
-        position absolute
-        left 15px
-        top 50%
-        transform translateY(-50%)
-        width 10%
-        height 50%
-        .icon-sousuo
-          font-size 25px
-          color #fff
-      .header_title
-        position absolute
-        top 50%
-        left 50%
-        transform translate(-50%, -50%)
-        width 50%
-        color #fff
-        text-align center
-        .header_title_text
-          font-size 20px
-          color #fff
-          display block
-      .header_login
-        font-size 14px
-        color #fff
-        position absolute
-        right 15px
-        top 50%
-        transform translateY(-50%)
-        .header_login_text
-          color #fff
     .msite_nav
       bottom-border-1px(#e4e4e4)
       margin-top 45px

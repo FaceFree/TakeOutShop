@@ -46,13 +46,14 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
-      {
+     /* {
         test: /\.css$/,
-        use: [
+        /!*use: [
           'style-loader',
           'css-loader'
-        ]
-      },
+        ]*!/
+        loader: 'style-loader!css-loader'
+      },*/
       {
         test: /\.js$/,
         loader: 'babel-loader',

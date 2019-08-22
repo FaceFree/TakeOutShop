@@ -1,10 +1,11 @@
 <template>
   <div class="order">
-    <header class="header">
+    <!--<header class="header">
       <a class="header_title">
         <span class="header_title_text">订单列表</span>
       </a>
-    </header>
+    </header>-->
+    <HeaderTop title="订单列表"/>
     <section class="order_no_login">
       <img src="./images/order/person.png">
       <h3>登录后查看外卖订单</h3>
@@ -14,8 +15,12 @@
 </template>
 
 <script>
+  import  HeaderTop from '../../components/HeaderTop/HeaderTop'
     export default {
-        name: "Order"
+        name: "Order",
+      components:{
+        HeaderTop
+      }
     }
 </script>
 
