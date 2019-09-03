@@ -7,9 +7,14 @@
 
 <script>
   import FooterGuide from './components/FooterGuide/FooterGuide'
+  import {reqCategorys} from './api'
 export default {
   name: 'App',
   components: {FooterGuide},
+  async mounted(){
+    const result=await reqCategorys()
+    console.log(result);
+  },
   component:{
     FooterGuide
   }

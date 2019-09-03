@@ -2,6 +2,7 @@
 与后台交互模块
 */
 import ajax from './ajax'
+const BASE_URL='http://localhost:4000'
 /**
  * 获取地址信息 ( 根据经纬度串 )
  */
