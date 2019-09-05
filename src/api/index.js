@@ -2,11 +2,10 @@
 与后台交互模块
 */
 import ajax from './ajax'
-const BASE_URL='http://localhost:4000'
 /**
  * 获取地址信息 ( 根据经纬度串 )
  */
-export const reqAddress = geohash => ajax('/api/position/' + geohash)
+export const reqAddress = (geohash) => ajax('/api/position/' + geohash)
 /**
  * 获取 msite 页面食品分类列表
  */
